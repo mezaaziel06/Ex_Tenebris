@@ -1,6 +1,6 @@
 import React from 'react';
 import Hero from './assets/components/Hero';
-import Gallery from './assets/components/Gallery';
+import Gallery from './assets/components/Galeria/Gallery';
 import Navbar from './assets/components/Navbar';
 import Team from './assets/components/Team';
 import Footer from './assets/components/Footer';
