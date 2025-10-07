@@ -15,7 +15,6 @@ const Navbar: React.FC = () => {
           <li className="cursor-pointer hover:text-red-500" onClick={() => scrollToSection('historia')}>Historia</li>
           <li className="cursor-pointer hover:text-red-500" onClick={() => scrollToSection('trailer')}>Trailer</li>
           <li className="cursor-pointer hover:text-red-500" onClick={() => scrollToSection('galeria')}>Galería</li>
-          <li className="cursor-pointer hover:text-red-500" onClick={() => scrollToSection('acerca')}>ABAUT</li>
         </ul>
 
         {/* Log In */}

@@ -7,22 +7,22 @@ const CuernosSection: React.FC = () => {
 
   return (
     <section
-     className="
+      className="
   relative isolate text-white px-6 md:px-8 pt-16 md:pt-24 overflow-visible
   bg-[#0a0a0a]
   bg-[linear-gradient(180deg,#2a0000_0%,#0c0b0b_55%,#000000_100%),radial-gradient(1100px_720px_at_50%_0%,rgba(110,0,0,.22)_0%,transparent_70%)]
   bg-no-repeat bg-[length:100%_100%,auto] bg-[position:center,50%_0%]
 "
-
-
-      style={{
-        // reserva espacio para el derrame: NO pisa la siguiente sección
-        paddingBottom: `calc(6rem + ${spill})`,
-        marginBottom: `calc(2rem + ${spill})`,
-        // expone la variable para usarla dentro
-        // @ts-ignore
-        "--spill": spill,
-      } as React.CSSProperties}
+      style={
+        {
+          // reserva espacio para el derrame: NO pisa la siguiente sección
+          paddingBottom: `calc(6rem + ${spill})`,
+          marginBottom: `calc(2rem + ${spill})`,
+          // expone la variable para usarla dentro
+          // @ts-ignore
+          "--spill": spill,
+        } as React.CSSProperties
+      }
     >
       {/* grano */}
       <div
@@ -59,19 +59,13 @@ const CuernosSection: React.FC = () => {
           <div className="absolute inset-0 grid grid-cols-[1.05fr_.95fr]">
             {/* texto abajo-izq */}
             <div className="relative flex items-end">
-              <div className="px-6 pb-10 md:px-10">
+              <div className="px-6 pb-10 md:px-5">
                 <h3 className="font-cinzel text-[22px] md:text-[30px] font-extrabold leading-tight">
-                  WHAT IS DESENTRALAND <br /> GAMES
+                    Sinópsis <br />
                 </h3>
                 <div className="mt-3 h-[2px] w-10 bg-white/85" />
                 <p className="mt-6 max-w-[62ch] text-[13.5px] leading-relaxed text-zinc-300">
-                  SED UT PERSPICIATIS UNDE OMNIS ISTE NATUS ERROR SIT VOLUPTATEM ACCUSANTIUM
-                  DOLOREMQUE LAUDANTIUM, TOTAM REM APERIAM, EAEQUE IPSA QUAE AB ILLO INVENTORE
-                  VERITATIS ET QUASI ARCHITECTO BEATAE VITAE DICTA SUNT EXPLICABO.
-                </p>
-                <p className="mt-4 max-w-[60ch] text-[13.5px] leading-relaxed text-zinc-300">
-                  LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO EIUSMOD TEMPOR
-                  INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM.
+                  Traicionado por su iglesia y condenado al infierno bajo la acusación de cometer herejía le fue asignado la tarea divina de acabar con los pecados del mundo viéndose obligado a cruzar los 7 círculos del infierno. Ahora El Santo debe saber elegir entre cargar la culpa de la humanidad o culminar su plan de venganza.
                 </p>
               </div>
 
