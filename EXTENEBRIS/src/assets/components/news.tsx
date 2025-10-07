@@ -4,8 +4,14 @@ import ira from "../images/ira.jpg";
 const News: React.FC = () => {
   return (
     // sección transparente: el bg lo pone el padre
-    <section id="noticias" className="relative py-10 md:py-16 px-6 text-white">
-      <div className="mx-auto max-w-6xl">
+    <section id="noticias"  className="
+  relative isolate text-white px-6 md:px-8 pt-16 md:pt-24 overflow-visible
+  bg-[#0a0a0a]
+  bg-[linear-gradient(180deg,#2a0000_0%,#0c0b0b_55%,#000000_100%),radial-gradient(1100px_720px_at_50%_0%,rgba(110,0,0,.22)_0%,transparent_70%)]
+  bg-no-repeat bg-[length:100%_100%,auto] bg-[position:center,50%_0%]
+"
+  >
+          <div className="mx-auto max-w-6xl">
         {/* FRAME (borde blanco) */}
         <div className="relative">
           {/* borde blanco finísimo */}

@@ -32,11 +32,11 @@ const InfernoGallery: React.FC = () => {
   return (
     <>
       <section
-        className="
-  relative overflow-hidden text-white py-16 px-6 md:py-24
+  className="
+  relative isolate text-white px-6 md:px-8 pt-16 md:pt-24 overflow-visible
   bg-[#0a0a0a]
-  bg-[linear-gradient(135deg,#2a0000_0%,#0c0b0b_46%,#000000_100%),radial-gradient(900px_700px_at_100%_100%,rgba(110,0,0,.18)_0%,transparent_70%)]
-  bg-no-repeat bg-[length:100%_100%,auto] bg-[position:center,100%_100%]
+  bg-[linear-gradient(180deg,#000000_0%,#0c0b0b_55%,#2a0000_100%),radial-gradient(1100px_720px_at_50%_0%,rgba(110,0,0,.22)_0%,transparent_70%)]
+  bg-no-repeat bg-[length:100%_100%,auto] bg-[position:center,50%_0%]
 "
 >
         {/* grano sutil */}
