@@ -11,10 +11,31 @@ const Navbar: React.FC = () => {
       <div className="max-w-4xl mx-auto px-0 py-8 flex justify-end text-white font-bold font-cormorant">
         {/* Links */}
         <ul className="flex gap-15 text-sm uppercase tracking-wide">
-          <li className="cursor-pointer hover:text-red-500" onClick={() => scrollToSection('hero')}>Home</li>
-          <li className="cursor-pointer hover:text-red-500" onClick={() => scrollToSection('historia')}>Historia</li>
-          <li className="cursor-pointer hover:text-red-500" onClick={() => scrollToSection('trailer')}>Trailer</li>
-          <li className="cursor-pointer hover:text-red-500" onClick={() => scrollToSection('galeria')}>Galería</li>
+          <li
+            className="cursor-pointer hover:text-red-500"
+            onClick={() => scrollToSection('hero')}
+          >
+            Home
+          </li>
+          <li
+            className="cursor-pointer hover:text-red-500"
+            onClick={() => scrollToSection('inferno')}
+          >
+            Inferno
+          </li>
+          <li
+            className="cursor-pointer hover:text-red-500"
+            onClick={() => scrollToSection('team')}
+          >
+            Team
+          </li>
+          <li
+            className="cursor-pointer hover:text-red-500"
+            onClick={() => scrollToSection('news')}
+          >
+            News
+          </li>
+          
         </ul>
 
         {/* Log In */}

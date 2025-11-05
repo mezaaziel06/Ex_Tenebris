@@ -86,7 +86,7 @@ const HeroExtenebris: React.FC = () => {
 
           <img
             src={santoPng}
-            alt="El Santo — protagonista"
+            alt="El Santo - protagonista"
             className="relative z-10 w-[520px] max-w-[75vw] select-none drop-shadow-[0_30px_60px_rgba(0,0,0,.9)]"
           />
         </div>
