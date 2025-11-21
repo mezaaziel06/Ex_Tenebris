@@ -24,7 +24,7 @@ const cards: Card[] = [
     image: traicionImg,
     description:
       "Combate con astucia y determinación contra poderosos enemigos que harán lo posible por frenar tu descenso.",
-    focus: "90% 10%", // ⬅️ encuadre más al centro/bajo para la última
+    focus: "90% 10%",
   },
 ];
 
@@ -32,13 +32,21 @@ const InfernoGallery: React.FC = () => {
   return (
     <>
       <section
-  className="
-  relative isolate text-white px-6 md:px-8 pt-16 md:pt-24 overflow-visible
-  bg-[#0a0a0a]
-  bg-[linear-gradient(180deg,#000000_0%,#0c0b0b_55%,#2a0000_100%),radial-gradient(1100px_720px_at_50%_0%,rgba(110,0,0,.22)_0%,transparent_70%)]
-  bg-no-repeat bg-[length:100%_100%,auto] bg-[position:center,50%_0%]
-"
->
+        className="
+          relative isolate text-white px-6 md:px-8 pt-28 md:pt-40 overflow-visible
+          bg-[#0a0a0a]
+          bg-[linear-gradient(180deg,#000000_0%,#0c0b0b_55%,#2a0000_100%),radial-gradient(1100px_720px_at_50%_0%,rgba(110,0,0,.22)_0%,transparent_70%)]
+          bg-no-repeat bg-[length:100%_100%,auto] bg-[position:center,50%_0%]
+        "
+      >
+        {/* fondo decorativo a partir de la imagen subida (ruta local convertida en URL por entorno) */}
+        <img
+          src="/mnt/data/b4bc1251-1657-4ebb-8249-ebfd69887f62.png"
+          alt="mockup-decor"
+          className="pointer-events-none absolute right-0 top-0 max-w-[520px] opacity-20 -translate-y-6 md:opacity-30"
+          style={{ filter: "blur(8px) saturate(.9)" }}
+        />
+
         {/* grano sutil */}
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-overlay"
@@ -61,7 +69,7 @@ const InfernoGallery: React.FC = () => {
         <style>{cssLocal}</style>
       </section>
 
-      {/* ⬇️ La sección de Cuernos va aparte, no dentro del marco de arriba */}
+      {/* ⬇️ La sección de Cuernos va aparte */}
       <CuernosSection />
     </>
   );
@@ -69,9 +77,7 @@ const InfernoGallery: React.FC = () => {
 
 export default InfernoGallery;
 
-/* ================== Card ================== */
-/* Rectangular, más alta que ancha, imagen = ancho del texto,
-   bordes SOLO en los lados y abajo (no arriba). */
+/* ================= FeatureCard (con animaciones A: elegante dorado + aura demoníaca) ================= */
 function FeatureCard({ title, image, description, focus }: Card) {
   return (
     <article
@@ -79,36 +85,96 @@ function FeatureCard({ title, image, description, focus }: Card) {
         group relative grid overflow-hidden rounded-sm
         h-[460px] md:h-[500px]
         grid-rows-[230px_1fr] md:grid-rows-[260px_1fr]
+        transition-all duration-500 ease-out
       "
     >
-      {/* Imagen arriba con quiebres */}
-      <div className="relative row-start-1 row-end-2">
+      {/* --- AURA DEMONÍACA (rojo) detrás de la card, visible en hover --- */}
+      <div
+        aria-hidden
+        className="
+          pointer-events-none absolute -inset-4 z-0 opacity-0 rounded-md
+          transition-all duration-600 ease-out
+          group-hover:opacity-100
+        "
+        style={{
+          boxShadow:
+            "0 40px 80px rgba(42, 6, 6, 0.52), 0 10px 30px rgba(120, 20, 8, 0.28), inset 0 -20px 80px rgba(60,10,8,0.18)",
+          background:
+            "radial-gradient(400px 160px at 10% 20%, rgba(255,120,60,0.06), transparent 25%), radial-gradient(300px 120px at 85% 70%, rgba(255,40,30,0.06), transparent 30%)",
+          transform: "translateY(8px) scale(0.98)",
+        }}
+      />
+
+      {/* --- GLOW DORADO ELEGANTE (sobre la card) --- */}
+      <div
+        aria-hidden
+        className="
+          pointer-events-none absolute inset-0 z-10 opacity-0 rounded-sm
+          transition-all duration-400 ease-out
+          group-hover:opacity-100
+        "
+        style={{
+          boxShadow:
+            "0 8px 30px rgba(255,200,120,0.06), 0 0 120px rgba(255,200,120,0.06), inset 0 0 60px rgba(255,210,150,0.02)",
+          background:
+            "linear-gradient(180deg, rgba(255,200,120,0.02), rgba(255,210,150,0.01))",
+          mixBlendMode: "screen",
+        }}
+      />
+
+      {/* Imagen arriba */}
+      <div className="relative row-start-1 row-end-2 overflow-hidden">
         <img
           src={image}
           alt={title}
-          className="absolute inset-0 h-full w-full object-cover img-notch"
-          style={{ objectPosition: focus || "50% 50%" }} // ⬅️ usa la prop focus
+          className="
+            absolute inset-0 h-full w-full object-cover img-notch 
+            transition-transform duration-700 ease-out
+            group-hover:scale-110 group-hover:brightness-[1.12]
+          "
+          style={{ objectPosition: focus || "50% 50%" }}
         />
         <div className="pointer-events-none absolute left-0 right-0 top-0 h-8 bg-gradient-to-b from-black/30 via-black/10 to-transparent" />
       </div>
 
-      {/* Texto con SOLO bordes laterales y abajo */}
+      {/* Texto */}
       <div
         className="
           row-start-2 row-end-3 flex flex-col items-center text-center
           border-x border-b border-white/25
           bg-[rgba(18,18,18,.60)]
           px-6 pt-6 pb-7 overflow-hidden
+          transition-all duration-400
         "
       >
-        <h3 className="font-semibold text-[18px] md:text-[19px]">{title}</h3>
+        <h3 className="font-semibold text-[18px] md:text-[19px] tracking-wide">
+          {title}
+        </h3>
         <p className="mt-3 text-[13.5px] leading-relaxed text-zinc-300">
           {description}
         </p>
+
+        {/* Linea decorativa */}
         <div className="mt-auto w-full">
-          <div className="mx-auto mt-5 h-[1px] w-full bg-gradient-to-r from-white/40 via-white/10 to-transparent" />
+          <div className="
+            mx-auto mt-5 h-[1px] w-full 
+            bg-gradient-to-r from-white/40 via-white/10 to-transparent
+            transition-all duration-700
+            group-hover:from-amber-300/70 group-hover:via-amber-200/20
+          " />
         </div>
       </div>
+
+      {/* --- PULSO DORADO (latido) que aparece sutilmente en hover --- */}
+      <span
+        aria-hidden
+        className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[220px] w-[220px] -translate-x-1/2 -translate-y-1/2 opacity-0 rounded-full transition-all duration-700 ease-out group-hover:opacity-70 pulse-gold"
+      />
+
+      {/* --- ELEVACIÓN y ZOOM de la card entera en hover (aplica transform) --- */}
+      <style>{`
+        .group:hover { transform: translateY(-10px) scale(1.03); transition: transform 380ms cubic-bezier(.2,.9,.2,1); }
+      `}</style>
     </article>
   );
 }
@@ -147,6 +213,7 @@ function SectionStars() {
 
 /* ================ CSS embebido ================ */
 const cssLocal = `
+/* image notch */
 .img-notch{
   clip-path:
     polygon(
@@ -156,15 +223,46 @@ const cssLocal = `
       100% 0, 100% 100%, 0 100%
     );
   transform: translateZ(0);
+  will-change: transform, filter;
 }
+
+/* twinkles */
 @keyframes twinkleSoft {
   0%, 100% { transform: rotate(45deg) scale(1); opacity:.85; filter: drop-shadow(0 0 6px rgba(120,220,255,.45)); }
   50%      { transform: rotate(45deg) scale(1.14); opacity:1;  filter: drop-shadow(0 0 10px rgba(120,220,255,.75)); }
 }
 .twinkle-soft { animation: twinkleSoft 3.4s ease-in-out infinite; }
+
 @keyframes twinkleDot {
   0%, 100% { transform: translateY(0) scale(1); opacity:.8; }
   50%      { transform: translateY(-1px) scale(1.18); opacity:1; }
 }
 .twinkle-dot { animation: twinkleDot 2.6s ease-in-out infinite; }
+
+/* Pulse dorado (latido sutil) */
+@keyframes pulseGold {
+  0% { transform: scale(.86); opacity: .0; filter: blur(0px); }
+  50% { transform: scale(1.05); opacity: .6; filter: blur(8px); }
+  100% { transform: scale(.98); opacity: .0; filter: blur(0px); }
+}
+.pulse-gold { animation: pulseGold 2.2s ease-in-out infinite; background: radial-gradient(circle at center, rgba(255,200,120,0.18), rgba(255,160,60,0.06), transparent 45%); }
+
+/* Glow dorado elegante (aparece sobre la card) */
+.glow-card {
+  box-shadow:
+    0 0 22px rgba(255, 188, 80, 0.18),
+    0 0 42px rgba(255, 180, 70, 0.12),
+    inset 0 0 18px rgba(255, 210, 120, 0.08);
+  border-radius: 4px;
+  transition: box-shadow 0.4s ease-out;
+}
+
+/* apoyo: suavizar sombras y rendimiento */
+.group img { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+
+/* small accessibility tweak for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .group, .group img, .pulse-gold { animation: none !important; transition: none !important; }
+}
 `;
+
