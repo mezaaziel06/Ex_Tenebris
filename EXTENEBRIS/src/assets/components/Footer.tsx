@@ -16,16 +16,16 @@ const Footer: React.FC = () => {
         <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
           {/* logo */}
           <div className="flex items-center gap-2">
-            <span className="relative inline-flex h-3 w-3 rotate-45 bg-cyan-300 shadow-[0_0_10px_2px_rgba(120,220,255,.7)]" />
+            <span className="relative inline-flex h-3 w-3 rotate-45 bg-red-500" />
             <span className="font-extrabold tracking-wide font-cinzel text-sm md:text-base">
-              EXTENEBRIS
+              Ex Tenebris
             </span>
           </div>
 
           {/* nav centrado */}
           <nav className="text-xs md:text-sm">
             <ul className="flex items-center gap-7 tracking-wide text-zinc-300">
-              {["HOME", "GAMEPLAY", "LIVE", "UPCOMING", "PAGE"].map((item) => (
+              {["", ""].map((item) => (
                 <li
                   key={item}
                   className="hover:text-white transition-colors duration-200 cursor-pointer"
@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
 
         {/* copyright */}
         <p className="mt-4 text-[11px] text-center text-zinc-300">
-          © 2025 Game. All Right Reserved
+          © 2025 Ex Tenebris. Todos los derechos reservados.
         </p>
       </div>
     </footer>

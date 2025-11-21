@@ -7,22 +7,22 @@ const CuernosSection: React.FC = () => {
 
   return (
     <section
-     className="
-  relative isolate text-white px-6 md:px-8 pt-28 md:pt-60 overflow-visible
+      className="
+  relative isolate text-white px-6 md:px-8 pt-24 md:pt-60 overflow-visible
   bg-[#0a0a0a]
   bg-[linear-gradient(180deg,#2a0000_0%,#0c0b0b_55%,#000000_100%),radial-gradient(1100px_720px_at_50%_0%,rgba(110,0,0,.22)_0%,transparent_70%)]
   bg-no-repeat bg-[length:100%_100%,auto] bg-[position:center,50%_0%]
 "
-
-
-      style={{
-        // reserva espacio para el derrame: NO pisa la siguiente sección
-        paddingBottom: `calc(6rem + ${spill})`,
-        marginBottom: `calc(2rem + ${spill})`,
-        // expone la variable para usarla dentro
-        // @ts-ignore
-        "--spill": spill,
-      } as React.CSSProperties}
+      style={
+        {
+          // reserva espacio para el derrame: NO pisa la siguiente sección
+          paddingBottom: `calc(6rem + ${spill})`,
+          marginBottom: `calc(2rem + ${spill})`,
+          // expone la variable para usarla dentro
+          
+          "--spill": spill,
+        } as React.CSSProperties
+      }
     >
       {/* grano */}
       <div
@@ -59,24 +59,22 @@ const CuernosSection: React.FC = () => {
           <div className="absolute inset-0 grid grid-cols-[1.05fr_.95fr]">
             {/* texto abajo-izq */}
             <div className="relative flex items-end">
-              <div className="px-6 pb-10 md:px-10">
+              <div className="px-6 pb-10 md:px-5">
                 <h3 className="font-cinzel text-[22px] md:text-[30px] font-extrabold leading-tight">
-                  <br /> ¿Qué parte de ti quedará atrás para que el resto pueda avanzar? 
+                  ¿Qué parte de ti quedará atrás para que el resto pueda avanzar? <br /> 
                 </h3>
                 <div className="mt-3 h-[2px] w-10 bg-white/85" />
                 <p className="mt-6 max-w-[62ch] text-[13.5px] leading-relaxed text-zinc-300">
                   El Infierno no es solo un lugar, es un reflejo corrupto del alma humana.
                   Cada círculo revela un fragmento de tus pecados, cada criatura observa lo que ocultas, cada paso que das resuena en la eternidad.
-
-
                 </p>
                 <p className="mt-4 max-w-[60ch] text-[13.5px] leading-relaxed text-zinc-300">
                   ¿Buscarás redención?
-                  
+
                 </p>
                 <p className="mt-4 max-w-[60ch] text-[13.5px] leading-relaxed text-zinc-300">
-                  
                   ¿O abrazarás la oscuridad que siempre te perteneció?
+
                 </p>
               </div>
 

@@ -34,11 +34,8 @@ const News: React.FC = () => {
                 por <span className="text-[#e96666] font-semibold">Ex Tenebris</span> con la comunidad.
               </p>
 
-              {/* Countdown */}
+              
               <div className="mt-6">
-                <p className="text-[10px] tracking-[.35em] text-zinc-400 mb-2">
-                  COUNTDOWN CALENDAR
-                </p>
                 <div className="grid grid-cols-3 gap-3 max-w-[240px]">
                   {[
                     { value: "02", label: "DAYS" },
@@ -83,7 +80,7 @@ const News: React.FC = () => {
                   <span className="absolute inset-0 rounded-[2px] ring-1 ring-white/85 transition group-hover:ring-white" />
                   {/* notch / rayita interna */}
                   <span className="absolute left-2 top-1/2 h-[1px] w-6 -translate-y-1/2 bg-white/85" />
-                  <span className="relative">REGISTER NOW</span>
+                  <span className="relative">Pre-ordenalo </span>
                 </button>
               </div>
             </div>
