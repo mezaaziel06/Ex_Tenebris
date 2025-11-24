@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
           {/* nav centrado */}
           <nav className="text-xs md:text-sm">
             <ul className="flex items-center gap-7 tracking-wide text-zinc-300">
-              {["HOME", "GAMEPLAY"].map((item) => (
+              {["", ""].map((item) => (
                 <li
                   key={item}
                   className="hover:text-white transition-colors duration-200 cursor-pointer"
@@ -57,10 +57,7 @@ const Footer: React.FC = () => {
               <path d="M7 6h10c1 0 2 .8 2 1.8v4.4c0 1-.8 1.8-1.8 1.8H7.8C6.8 14 6 13.2 6 12.2V7.8C6 6.8 6.8 6 7.8 6z" fill="#fff" />
               <path d="M10 8l4 2-4 2V8z" fill="#FF0000" />
             </IconCircle>
-            <IconCircle label="LinkedIn" bg="#0A66C2">
-              {/* in */}
-              <path d="M6.5 6a1.5 1.5 0 110-3 1.5 1.5 0 010 3zM5 7h3v9H5V7zm5 0h2.8v1.2h.1c.4-.7 1.3-1.4 2.7-1.4C18.3 6.8 19 8.4 19 10.6V16h-3v-4.5c0-1.1-.4-1.9-1.3-1.9-.7 0-1.1.5-1.3 1.1 0 .2-.1.5-.1.8V16h-3V7z" fill="#fff" />
-            </IconCircle>
+           
           </div>
         </div>
 

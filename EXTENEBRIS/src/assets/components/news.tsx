@@ -80,7 +80,7 @@ const News: React.FC = () => {
                   <span className="absolute inset-0 rounded-[2px] ring-1 ring-white/85 transition group-hover:ring-white" />
                   {/* notch / rayita interna */}
                   <span className="absolute left-2 top-1/2 h-[1px] w-6 -translate-y-1/2 bg-white/85" />
-                  <span className="relative">Pre-ordenalo </span>
+                  <span className="relative">   Visitanos  </span>
                 </button>
               </div>
             </div>

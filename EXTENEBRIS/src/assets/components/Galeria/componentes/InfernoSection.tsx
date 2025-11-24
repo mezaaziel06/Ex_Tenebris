@@ -8,7 +8,7 @@ const CuernosSection: React.FC = () => {
   return (
     <section
       className="
-  relative isolate text-white px-6 md:px-8 pt-16 md:pt-24 overflow-visible
+  relative isolate text-white px-6 md:px-8 pt-24 md:pt-60 overflow-visible
   bg-[#0a0a0a]
   bg-[linear-gradient(180deg,#2a0000_0%,#0c0b0b_55%,#000000_100%),radial-gradient(1100px_720px_at_50%_0%,rgba(110,0,0,.22)_0%,transparent_70%)]
   bg-no-repeat bg-[length:100%_100%,auto] bg-[position:center,50%_0%]
@@ -19,7 +19,7 @@ const CuernosSection: React.FC = () => {
           paddingBottom: `calc(6rem + ${spill})`,
           marginBottom: `calc(2rem + ${spill})`,
           // expone la variable para usarla dentro
-          // @ts-ignore
+          
           "--spill": spill,
         } as React.CSSProperties
       }
@@ -61,11 +61,20 @@ const CuernosSection: React.FC = () => {
             <div className="relative flex items-end">
               <div className="px-6 pb-10 md:px-5">
                 <h3 className="font-cinzel text-[22px] md:text-[30px] font-extrabold leading-tight">
-                    Sinópsis <br />
+                  ¿Qué parte de ti quedará atrás para que el resto pueda avanzar? <br /> 
                 </h3>
                 <div className="mt-3 h-[2px] w-10 bg-white/85" />
                 <p className="mt-6 max-w-[62ch] text-[13.5px] leading-relaxed text-zinc-300">
-                  Traicionado por su iglesia y condenado al infierno bajo la acusación de cometer herejía le fue asignado la tarea divina de acabar con los pecados del mundo viéndose obligado a cruzar los 7 círculos del infierno. Ahora El Santo debe saber elegir entre cargar la culpa de la humanidad o culminar su plan de venganza.
+                  El Infierno no es solo un lugar, es un reflejo corrupto del alma humana.
+                  Cada círculo revela un fragmento de tus pecados, cada criatura observa lo que ocultas, cada paso que das resuena en la eternidad.
+                </p>
+                <p className="mt-4 max-w-[60ch] text-[13.5px] leading-relaxed text-zinc-300">
+                  ¿Buscarás redención?
+
+                </p>
+                <p className="mt-4 max-w-[60ch] text-[13.5px] leading-relaxed text-zinc-300">
+                  ¿O abrazarás la oscuridad que siempre te perteneció?
+
                 </p>
               </div>
 
