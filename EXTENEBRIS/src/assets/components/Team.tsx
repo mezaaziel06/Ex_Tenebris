@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
 import Michelle from "../images/Michelle.svg";
 import Toto from "../images/toto.svg";
-import Charlie from "../images/Charlie.svg";
-import Mauricio from "../images/Mauricio.svg";
+import Charlie from "../images/charlie.svg";
+import Mauricio from "../images/mauricio.svg";
 import Omar from "../images/omar.svg";
 
 type Member = { name: string; role: string; image: string };
